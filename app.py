@@ -12,10 +12,10 @@ nltk.download('stopwords')
 
 # === Load saved model and vectorizer ===
 try:
-    model = pickle.load(open("model.pkl", "rb"))
-    vectorizer = pickle.load(open("vectorizer.pkl", "rb"))
+    model = pickle.load(open("models/model.pkl", "rb"))
+    vectorizer = pickle.load(open("models/vectorizer.pkl", "rb"))
 except Exception as e:
-    st.error(" Error loading model or vectorizer.")
+    st.error("Error loading model or vectorizer.")
     st.exception(e)
     st.stop()
 
